@@ -1,0 +1,23 @@
+<div class="mat-elevation-z6">
+  <nav aria-label="Top Toolbar" class="docs-navbar-header">
+    <mat-toolbar color="primary">
+<!--      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--        <mat-icon>menu</mat-icon>-->
+<!--      </button>-->
+      <a mat-button routerLink="/" style="font-size: 2rem">New Fashion</a>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" (click)="mainNavComponent.toggleSidebar()"
+              aria-label="User Main Menu">
+        <i class="far fa-user-circle fa-2x"></i>
+      </button>
+    </mat-toolbar>
+  </nav>
+</div>
+<app-main-nav-component #mainNavComponent>
+  <div style="max-width: 1500px; min-width: 800px; min-height: 90vh; background-color: white; padding: 20px">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <div style="margin-top: 20px">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</app-main-nav-component>

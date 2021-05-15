@@ -12,6 +12,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {ProductService} from "../services/product.service";
+import {HttpClientModule} from "@angular/common/http";
+import {AppStateService} from "../services/app-state.service";
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -30,7 +34,10 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
     MatListModule,
     MatProgressBarModule,
   ],
-  providers: [],
+  providers: [
+    ProductService,
+    AppStateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

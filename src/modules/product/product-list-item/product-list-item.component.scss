@@ -1,14 +1,19 @@
 :host {
   margin-left: 10px;
   margin-top: 10px;
-  flex: 0 0 255px;
+  flex: 0 0 300px;
   &:hover {
     .product-item-button {
       visibility: visible;
     }
   }
+  cursor: pointer;
 }
 
 .product-item-button {
   visibility: hidden;
+  &:hover {
+    color: #673ab7;
+    font-weight: 600;
+  }
 }

@@ -8,13 +8,16 @@ import {ProductListItemComponent} from "./product-list-item/product-list-item.co
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatChipsModule} from "@angular/material/chips";
+import {ProductDetailComponent} from "./product-detail/product-detail.component";
+import {ProductDetailResolverService} from "../../services/product-detail-resolver.service";
 
 
 @NgModule({
   declarations: [
     ProductListComponent,
     IndexComponent,
-    ProductListItemComponent
+    ProductListItemComponent,
+    ProductDetailComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +26,9 @@ import {MatChipsModule} from "@angular/material/chips";
     MatButtonModule,
     MatChipsModule
   ],
+  providers: [
+      ProductDetailResolverService
+  ]
 })
 export class ProductModule {
 }

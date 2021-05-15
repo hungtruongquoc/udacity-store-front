@@ -1,2 +1,7 @@
-<h1 style="text-align: center">Products - <span style="color: #673ab7" *ngIf="!!list.count">{{list.count}}</span></h1>
+<h1 style="text-align: center">Products</h1>
+<div style="padding: 0 48%" *ngIf="list.hasItems">
+  <mat-chip-list>
+    <mat-chip color="primary" selected><span style="font-size: 24px">{{list.count}}</span></mat-chip>
+  </mat-chip-list>
+</div>
 <app-product-list #list></app-product-list>

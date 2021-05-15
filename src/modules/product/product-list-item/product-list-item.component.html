@@ -4,7 +4,7 @@
       <span style="text-transform: capitalize; font-size: 24px; line-height: 32px">{{item.name}}</span>
     </mat-card-title>
   </mat-card-header>
-  <div style="text-align: center">
+  <div style="text-align: center" [routerLink]="[item.id]">
     <i class="far fa-tshirt fa-3x" *ngIf="!item.thumb_link"></i>
     <img [src]="item.thumb_link" style="height: 150px; width: 100px" />
   </div>

@@ -6,11 +6,24 @@ import {map} from "rxjs/operators";
 import {ResponseInterface} from "./ResponseInterface";
 
 
+export function mapHttpData(cache: ResponseInterface | null = null) {
+  return (response: ResponseInterface) => {
+    if (response && 'success' === response.status) {
+      if (cache) {
+        cache = JSON.parse(JSON.stringify(response));
+      }
+      return response.data;
+    }
+    return null;
+  }
+}
+
 export interface ProductInterface {
   price?: number;
   thumb_link?: string;
   large_link?: string;
   name?: string;
+  id?: number
 }
 
 export interface ProductListResponse {
@@ -34,12 +47,20 @@ export class ProductService {
     if (productListResponse && !force) {
       return of(productListResponse.data);
     }
-    return this.http.get(environment.apiBase + '/products').pipe(map((response: ResponseInterface) => {
-      if (response && 'success' === response.status) {
-        productListResponse = response;
-        return response.data;
+    return this.http.get(environment.apiBase + '/products').pipe(map(mapHttpData(productListResponse)));
+  }
+
+  getProduct(id: number, force = false) {
+    if (productListResponse && productListResponse.data && !force) {
+      const {data} = productListResponse;
+      if (data && Array.isArray(data) && data.length > 0) {
+        const target = data.find(item => item.id === id);
+        if (target) {
+          return of({status: 'success', data: JSON.parse(JSON.stringify(target))});
+        }
       }
-      return null;
-    }));
+      return of({status: 'success', data: null});
+    }
+    return this.http.get(environment.apiBase + `/products/${id}`).pipe(map(mapHttpData()));
   }
 }

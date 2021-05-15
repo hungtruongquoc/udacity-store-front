@@ -1,0 +1,13 @@
+<h1 style="text-align: center; text-transform: capitalize; font-size: 32px">
+  <span *ngIf="detail">{{detail.name}}</span>
+  <span *ngIf="!detail">Product Detail</span>
+</h1>
+<div class="detail-container" style="display: flex" *ngIf="detail">
+  <div class="detail-image info-item">
+    <img style="max-width: 500px; max-height: 750px" [src]="detail.large_link"/>
+  </div>
+  <div class="detail-info info-item">
+    <h2 style="font-size: 24px">Price: {{detail.price | currency}}</h2>
+    <a style="font-size: 20px" [routerLink]="['/products']">View our product list</a>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AppStateService} from "../services/app-state.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'store';
+
+  get isLoading() {
+    return this.stateSrv.isLoading;
+  }
+
+  constructor(private stateSrv: AppStateService) {
+
+  }
 }

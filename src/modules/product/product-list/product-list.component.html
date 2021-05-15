@@ -1,0 +1,9 @@
+<ng-container *ngIf="!hasItems">
+  <app-product-list-item></app-product-list-item>
+  <app-product-list-item></app-product-list-item>
+  <app-product-list-item></app-product-list-item>
+</ng-container>
+
+<ng-container *ngIf="hasItems">
+  <app-product-list-item *ngFor="let item of itemList" [item]="item"></app-product-list-item>
+</ng-container>

@@ -5,7 +5,11 @@ const routes: Routes = [
   { path: '',   redirectTo: '/products', pathMatch: 'full' }, // redirect to `first-component`
   {
     path: 'products',
-    loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
+    loadChildren: () => import('../modules/product/product.module').then(m => m.ProductModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('../modules/auth/auth.module').then(m => m.AuthModule)
   }
 ];
 

@@ -6,6 +6,9 @@
 <!--      </button>-->
       <a mat-button routerLink="/" style="font-size: 2rem">New Fashion</a>
       <span class="example-spacer"></span>
+      <a mat-icon-button routerLink="/login">
+        <i class="far fa-sign-in fa-2x"></i>
+      </a>
       <button mat-icon-button class="example-icon" (click)="mainNavComponent.toggleSidebar()"
               aria-label="User Main Menu">
         <i class="far fa-user-circle fa-2x"></i>
@@ -15,7 +18,7 @@
 </div>
 <app-main-nav-component #mainNavComponent>
   <div style="max-width: 1500px; min-width: 800px; min-height: 90vh; background-color: white; padding: 20px">
-    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
     <div style="margin-top: 20px">
       <router-outlet></router-outlet>
     </div>

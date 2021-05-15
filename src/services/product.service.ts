@@ -31,7 +31,6 @@ export class ProductService {
   }
 
   getProducts(force = false): Observable<ProductInterface[] | undefined> {
-    debugger;
     if (productListResponse && !force) {
       return of(productListResponse.data);
     }

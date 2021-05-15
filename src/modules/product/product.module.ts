@@ -7,6 +7,7 @@ import {IndexComponent} from "./index/index.component";
 import {ProductListItemComponent} from "./product-list-item/product-list-item.component";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import {MatChipsModule} from "@angular/material/chips";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {MatButtonModule} from "@angular/material/button";
     CommonModule,
     ProductRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatChipsModule
   ],
 })
 export class ProductModule {

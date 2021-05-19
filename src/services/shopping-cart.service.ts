@@ -29,7 +29,7 @@ export class ShoppingCartService {
 
   private emitChangeInfo() {
     this.currentCount.next(shoppingCart.length);
-    this.cartChanged.emit(shoppingCart);
+    this.cartChanged.emit(JSON.parse(JSON.stringify(this.getCartContent())));
   }
 
   addToCart(item: CartItemInterface) {
@@ -37,16 +37,22 @@ export class ShoppingCartService {
       const existingIndex = shoppingCart.findIndex(cartItem => cartItem.itemId === item.itemId);
       if (existingIndex > -1) {
         if (item.qty !== undefined && item.qty !== null && item.qty > 0) {
-          shoppingCart[existingIndex] = {...item};
+          if (shoppingCart[existingIndex].qty !== item.qty) {
+            shoppingCart[existingIndex] = {...item};
+            this.emitChangeInfo();
+          }
         }
         else {
           shoppingCart.splice(existingIndex, 1);
+          this.emitChangeInfo();
         }
       }
       else {
-        shoppingCart.push(item);
+        if (item.qty !== undefined && item.qty !== null && item.qty > 0) {
+          shoppingCart.push(item);
+          this.emitChangeInfo();
+        }
       }
-      this.emitChangeInfo();
     }
   }
 
@@ -56,5 +62,12 @@ export class ShoppingCartService {
       shoppingCart.splice(existingIndex, 1);
       this.emitChangeInfo();
     }
+  }
+
+  public getCartItem(productId: number | undefined | null = null): CartItemInterface | undefined | null {
+    if (productId) {
+      return shoppingCart.find(item => item.itemId === productId);
+    }
+    return null;
   }
 }

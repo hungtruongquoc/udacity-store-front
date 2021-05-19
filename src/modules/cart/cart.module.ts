@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 
 import {CartRoutingModule} from './cart-routing.module';
 import {CartComponent} from './cart.component';
-import {ShoppingCartService} from "../../services/shopping-cart.service";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {CartItemInputComponent} from "./cart-item-input/cart-item-input.component";
 import {MatButtonModule} from "@angular/material/button";

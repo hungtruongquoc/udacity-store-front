@@ -55,7 +55,6 @@ export class ProductService {
         if (productListResponse && productListResponse.data && !force) {
             const {data} = productListResponse;
             if (data && Array.isArray(data) && data.length > 0) {
-                debugger;
                 const target = data.find(item => parseInt(item.id, 10) === id);
                 if (target) {
                     return of(JSON.parse(JSON.stringify(target)));

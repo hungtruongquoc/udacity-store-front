@@ -10,25 +10,33 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatChipsModule} from "@angular/material/chips";
 import {ProductDetailComponent} from "./product-detail/product-detail.component";
 import {ProductDetailResolverService} from "../../services/product-detail-resolver.service";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatSelectModule} from "@angular/material/select";
+import {CartItemAdditionModule} from "../../common/components/cart-item-addition/cart-item-addition.module";
+import {PageHeaderModule} from "../../common/components/page-header/page-header.module";
 
 
 @NgModule({
-  declarations: [
-    ProductListComponent,
-    IndexComponent,
-    ProductListItemComponent,
-    ProductDetailComponent
-  ],
-  imports: [
-    CommonModule,
-    ProductRoutingModule,
-    MatCardModule,
-    MatButtonModule,
-    MatChipsModule
-  ],
-  providers: [
-      ProductDetailResolverService
-  ]
+    declarations: [
+        ProductListComponent,
+        IndexComponent,
+        ProductListItemComponent,
+        ProductDetailComponent
+    ],
+    imports: [
+        CommonModule,
+        ProductRoutingModule,
+        MatCardModule,
+        MatButtonModule,
+        MatChipsModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        CartItemAdditionModule,
+        PageHeaderModule
+    ],
+    providers: [
+        ProductDetailResolverService
+    ]
 })
 export class ProductModule {
 }

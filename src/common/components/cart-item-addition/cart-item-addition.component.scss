@@ -1,0 +1,9 @@
+div {
+  &.cart-info-container {
+    display: flex;
+    align-items: center;
+    button {
+      height: 40px;
+    }
+  }
+}

@@ -1,25 +1,28 @@
 <mat-card class="example-card">
-  <mat-card-header>
-    <mat-card-title>
-      <span style="text-transform: capitalize; font-size: 24px; line-height: 32px">{{item.name}}</span>
-    </mat-card-title>
-  </mat-card-header>
-  <div style="text-align: center" [routerLink]="[item.id]">
-    <i class="far fa-tshirt fa-3x" *ngIf="!item.thumb_link"></i>
-    <img [src]="item.thumb_link" style="height: 150px; width: 100px" />
-  </div>
-  <mat-card-content>
-    <h2 style="text-align: center; font-size: 21px">{{item.price | currency}}</h2>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-icon-button>
-      <i class="far fa-cart-arrow-down fa-2x"></i>
-    </button>
-    <button mat-icon-button class="product-item-button">
-      <i class="fal fa-heart fa-lg"></i>
-    </button>
-    <button mat-icon-button class="product-item-button">
-      <i class="fal fa-share-square fa-lg"></i>
-    </button>
-  </mat-card-actions>
+    <mat-card-header>
+        <mat-card-title>
+            <span style="text-transform: capitalize; font-size: 24px; line-height: 32px"
+                  *ngIf="item">{{item.name}}</span>
+        </mat-card-title>
+    </mat-card-header>
+    <div style="text-align: center" [routerLink]="[item.id]" *ngIf="item">
+        <i class="far fa-tshirt fa-3x" *ngIf="!item.thumb_link"></i>
+        <img [src]="item.thumb_link" style="height: 150px; width: 100px"/>
+    </div>
+    <mat-card-content>
+        <h2 *ngIf="item" style="text-align: center; font-size: 21px">
+            {{item.price | currency}}
+        </h2>
+    </mat-card-content>
+    <mat-card-actions>
+        <app-cart-item-addition (quantityChanged)="updateItemQty($event)" [initialQty]="0"
+                                (addCartButtonClicked)="addToCart(item)">
+        </app-cart-item-addition>
+        <button mat-icon-button class="product-item-button">
+            <i class="fal fa-heart fa-lg"></i>
+        </button>
+        <button mat-icon-button class="product-item-button">
+            <i class="fal fa-share-square fa-lg"></i>
+        </button>
+    </mat-card-actions>
 </mat-card>

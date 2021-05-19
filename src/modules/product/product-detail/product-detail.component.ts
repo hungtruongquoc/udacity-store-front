@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ProductInterface} from "../../../services/product.service";
+import {ShoppingCartService} from "../../../services/shopping-cart.service";
 
 @Component({
   selector: 'app-product-detail',
@@ -10,11 +11,19 @@ import {ProductInterface} from "../../../services/product.service";
 export class ProductDetailComponent implements OnInit {
 
   detail: ProductInterface | null = null;
+  quantity: number = 0;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private cartSrv: ShoppingCartService) { }
 
   ngOnInit(): void {
+    debugger;
     this.detail = this.route.snapshot.data['detail'];
   }
 
+  addCart(): void {
+    const {detail, quantity} = this;
+    if (detail) {
+      this.cartSrv.addToCart({itemId: detail.id, qty: quantity});
+    }
+  }
 }

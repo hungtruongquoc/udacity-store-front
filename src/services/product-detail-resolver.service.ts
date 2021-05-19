@@ -10,6 +10,6 @@ export class ProductDetailResolverService implements Resolve<ProductInterface>{
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProductInterface> {
     const productId = route.params['id'];
-    return this.service.getProduct(productId);
+    return this.service.getProduct(parseInt(productId, 10));
   }
 }

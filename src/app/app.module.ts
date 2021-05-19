@@ -15,30 +15,34 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {ProductService} from "../services/product.service";
 import {HttpClientModule} from "@angular/common/http";
 import {AppStateService} from "../services/app-state.service";
+import {ShoppingCartService} from "../services/shopping-cart.service";
+import {MatBadgeModule} from "@angular/material/badge";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainNavComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    HttpClientModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatProgressBarModule,
-  ],
-  providers: [
-    ProductService,
-    AppStateService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        MainNavComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        HttpClientModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatListModule,
+        MatProgressBarModule,
+        MatBadgeModule
+    ],
+    providers: [
+        ProductService,
+        AppStateService,
+        ShoppingCartService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

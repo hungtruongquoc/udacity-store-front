@@ -1,0 +1,14 @@
+<div class="item-image" *ngIf="item">
+    <button mat-flat-button color="warn" class="remove-button" (click)="removeClicked.emit(item)">
+        <i class="far fa-trash"></i> Remove
+    </button>
+    <img [src]="item.imageLink" />
+</div>
+<div class="item-info" *ngIf="item" style="display: flex; flex-flow: column nowrap">
+    <h2 *ngIf="item">
+        {{item.name}}
+    </h2>
+    <h3>{{item.price | currency}}</h3>
+    <app-cart-item-addition [showButton]="false" [initialQty]="item.qty" *ngIf="item.qty"></app-cart-item-addition>
+</div>
+

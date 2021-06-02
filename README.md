@@ -1,26 +1,49 @@
-# Store
+# Front End Store
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 
+## Dependencies
+
+NodeJS version 12 and up
+
+## Back End API
+This app needs a back end API running at `http://localhost:300`. The code of the back end 
+can be cloned from [back end repo](https://github.com/hungtruongquoc/nd0067-c2-creating-an-api-with-postgresql-and-express-project-starter).
+
+Once the back end is cloned to a local folder, a `.env` file needs to be created at the root folder of the application with following content:
+```dotenv
+POSTGRES_HOST=
+POSTGRES_DB=
+POSTGRES_TEST_DB=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+BCRYPT_PASSWORD=
+SALT_ROUND=
+TOKEN_SECRET=
+TEST_ENV=
+```
+
+Make sure you create the `POSTGRES_DB` in your local server in advance. With `.env` file is ready, you can start migrate 
+the database structure using `npm run migrate` at the root folder (where you can find the `package.json` file). 
+After the successful migration, you need to run `npm run data:seed` to add sample products to the database.
+
+Only when you have the sample products inserted, you can start the back end using `npm run start:watch`. 
+This command does not require the built Javascript files of the back end to run. 
+
+You should see following output in the console if the back end start properly:
+
+```
+[nodemon] 2.0.7
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: ts,json
+[nodemon] starting `ts-node ./src/server.ts`
+starting app on: 0.0.0.0:3000
+```
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+Run `npm run start` at the root folder of this repo to start a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Further help
 

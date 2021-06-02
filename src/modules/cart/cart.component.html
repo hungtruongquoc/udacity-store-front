@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="checkout-form">
-        <app-check-out-form></app-check-out-form>
+        <app-check-out-form (formSubmitted)="sendOrderData($event)" #orderForm></app-check-out-form>
     </div>
 </div>
 <h2 *ngIf="!isLoading && cartItems.length < 1" style="text-align: center">

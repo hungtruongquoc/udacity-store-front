@@ -23,5 +23,4 @@ export class CartItemAdditionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

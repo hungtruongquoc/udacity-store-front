@@ -1,0 +1,46 @@
+<form [formGroup]="form" (ngSubmit)="emitFormSubmission($event)">
+  <mat-list role="list">
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width-field">
+        <mat-label>Full Name *</mat-label>
+        <input type="text" matInput formControlName="fullName">
+        <mat-error *ngIf="hasValidationError('fullName', 'required')">
+          Full name is required
+        </mat-error>
+        <mat-error *ngIf="hasValidationError('fullName', 'minlength')">
+          Full name has to be at least 5 characters
+        </mat-error>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width-field">
+        <mat-label>Address *</mat-label>
+        <input type="text" matInput formControlName="address">
+        <mat-error *ngIf="hasValidationError('address', 'required')">
+          Address is required
+        </mat-error>
+        <mat-error *ngIf="hasValidationError('address', 'minlength')">
+          Full name has to be at least 10 characters
+        </mat-error>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item role="listitem">
+      <mat-form-field class="full-width-field">
+        <mat-label>Card Number *</mat-label>
+        <input type="text" matInput formControlName="cardNumber" placeholder="1231-1231-1213-1212">
+        <mat-error *ngIf="hasValidationError('cardNumber', 'required')">
+          Card number is required
+        </mat-error>
+        <mat-error *ngIf="hasValidationError('cardNumber', 'pattern')">
+          Card number can only number 0 - 9
+        </mat-error>
+        <mat-error *ngIf="hasValidationError('cardNumber', 'minlength')">
+          Card number must have 16 digits
+        </mat-error>
+      </mat-form-field>
+    </mat-list-item>
+    <mat-list-item>
+      <button type="submit" mat-flat-button color="primary" [disabled]="form.invalid">Submit</button>
+    </mat-list-item>
+  </mat-list>
+</form>

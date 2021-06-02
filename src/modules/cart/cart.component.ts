@@ -1,6 +1,7 @@
-import {Component, OnInit, SkipSelf} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CartItemInterface, ShoppingCartService} from "../../services/shopping-cart.service";
 import {ProductInterface, ProductService} from "../../services/product.service";
+import {OrderDataInterface} from "../../services/order.service";
 
 @Component({
     selector: 'app-cart',
@@ -69,5 +70,9 @@ export class CartComponent implements OnInit {
             }
             return total;
         }, 0)
+    }
+
+    sendOrderData(orderData: OrderDataInterface) {
+        console.log(orderData);
     }
 }

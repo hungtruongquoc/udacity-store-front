@@ -3,11 +3,11 @@ import {CommonModule} from '@angular/common';
 
 import {CartRoutingModule} from './cart-routing.module';
 import {CartComponent} from './cart.component';
-import {ShoppingCartService} from "../../services/shopping-cart.service";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {CartItemInputComponent} from "./cart-item-input/cart-item-input.component";
 import {MatButtonModule} from "@angular/material/button";
 import {CartItemAdditionModule} from "../../common/components/cart-item-addition/cart-item-addition.module";
+import {CheckOutFormModule} from "../../Forms/check-out-form/check-out-form.module";
 
 
 @NgModule({
@@ -20,7 +20,8 @@ import {CartItemAdditionModule} from "../../common/components/cart-item-addition
         CartRoutingModule,
         MatProgressSpinnerModule,
         MatButtonModule,
-        CartItemAdditionModule
+        CartItemAdditionModule,
+        CheckOutFormModule
     ]
 })
 export class CartModule {

@@ -5,16 +5,21 @@
     <mat-progress-spinner style="margin: 0 auto" [diameter]="30" mode="indeterminate"></mat-progress-spinner>
 </div>
 <div *ngIf="!isLoading && cartItems.length > 0" class="cart-item-container">
-    <h3 class="action-container" style="margin-bottom: 10px">
-        <a routerLink="/">Continue shopping</a>
-    </h3>
-    <div class="cart-detail-container" style="max-height: 50vh; overflow-y: auto">
-        <app-cart-item-input *ngFor="let item of cartItems" [item]="item" (removeClicked)="removeCartItem($event)">
-        </app-cart-item-input>
+    <div class="item-list">
+        <h3 class="action-container" style="margin-bottom: 10px">
+            <a routerLink="/">Continue shopping</a>
+        </h3>
+        <div class="cart-detail-container" style="max-height: 50vh; overflow-y: auto">
+            <app-cart-item-input *ngFor="let item of cartItems" [item]="item" (removeClicked)="removeCartItem($event)">
+            </app-cart-item-input>
+        </div>
+        <div style="display: flex; margin-top: 20px; justify-content: center">
+            <h2>Total</h2>
+            <h1 style="text-align: right; margin-left: 10px">{{cartTotal | currency}}</h1>
+        </div>
     </div>
-    <div style="display: flex; margin-top: 20px; justify-content: center">
-        <h2>Total</h2>
-        <h1 style="text-align: right; margin-left: 10px">{{cartTotal | currency}}</h1>
+    <div class="checkout-form">
+        <app-check-out-form (formSubmitted)="sendOrderData($event)" #orderForm></app-check-out-form>
     </div>
 </div>
 <h2 *ngIf="!isLoading && cartItems.length < 1" style="text-align: center">

@@ -15,7 +15,7 @@
         </h2>
     </mat-card-content>
     <mat-card-actions>
-        <app-cart-item-addition (quantityChanged)="updateItemQty($event)" [initialQty]="0"
+        <app-cart-item-addition (quantityChanged)="updateItemQty($event)" [initialQty]="initialCartQty"
                                 (addCartButtonClicked)="addToCart(item)">
         </app-cart-item-addition>
         <button mat-icon-button class="product-item-button">

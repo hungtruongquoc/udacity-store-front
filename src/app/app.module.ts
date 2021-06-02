@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppStateService} from "../services/app-state.service";
 import {ShoppingCartService} from "../services/shopping-cart.service";
 import {MatBadgeModule} from "@angular/material/badge";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
     declarations: [
@@ -35,7 +36,8 @@ import {MatBadgeModule} from "@angular/material/badge";
         MatIconModule,
         MatListModule,
         MatProgressBarModule,
-        MatBadgeModule
+        MatBadgeModule,
+        MatSnackBarModule
     ],
     providers: [
         ProductService,

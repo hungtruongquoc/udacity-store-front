@@ -4,7 +4,7 @@ export interface OrderDataInterface {
   fullName?: string;
   address?: string;
   cardNumber?: string;
-  items?: Array<{productId?: string; qty?: string}>
+  total?: number
 }
 
 @Injectable({

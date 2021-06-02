@@ -9,7 +9,7 @@ export interface CartItemInterface {
   price?: number
 }
 
-const shoppingCart: CartItemInterface[] = [];
+let shoppingCart: CartItemInterface[] = [];
 
 @Injectable({
   providedIn: 'root'
@@ -69,5 +69,10 @@ export class ShoppingCartService {
       return shoppingCart.find(item => item.itemId === productId);
     }
     return null;
+  }
+
+  public removeCurrentCart() {
+    shoppingCart = [];
+    this.emitChangeInfo();
   }
 }

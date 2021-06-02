@@ -1,0 +1,14 @@
+p {
+  text-align: center;
+  font-size: 14pt;
+  margin-top: 10px;
+
+  span {
+    &.highlight {
+      font-size: 20pt;
+      font-weight: bold;
+      margin-left: 5px;
+      margin-right: 5px
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<app-page-header>Order Confirmation</app-page-header>
+<ng-container *ngIf="order && order.cardNumber">
+  <h1 style="color: green; text-align: center; margin-top: 50px"><i class="fas fa-check-circle"></i> Order Confirmed</h1>
+  <p>
+    Thanks
+    <span class="highlight">
+      {{order.fullName}}
+    </span>
+    for purchasing our products
+  </p>
+  <p>The total <span class="highlight">{{order.total | currency}}</span> won't be charged until we ship your order</p>
+  <p>Please allow 2 - 3 days business day for processing your purchase</p>
+  <h2 class="action-container" style="margin-top: 30px; text-align: center">
+    <a routerLink="/">Continue shopping</a>
+  </h2>
+</ng-container>

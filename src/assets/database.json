@@ -3,126 +3,147 @@
     "name": "T-Shirt",
     "price": 10,
     "thumb_link": "https://unsplash.com/photos/Wr0TpKqf26s/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/Wr0TpKqf26s/download?force=true&w=2400"
+    "large_link": "https://unsplash.com/photos/Wr0TpKqf26s/download?force=true&w=2400",
+    "description": "A black shirt"
   },
   {
     "name": "T-Shirt",
     "price": 10,
     "thumb_link": "https://unsplash.com/photos/hgtWvsq5e2c/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/hgtWvsq5e2c/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/hgtWvsq5e2c/download?force=true&w=1920",
+    "description": "A black shirt for women"
   },
   {
     "name": "Revolt Shoe",
     "price": 100,
     "thumb_link": "https://unsplash.com/photos/164_6wVEHfI/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/164_6wVEHfI/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/164_6wVEHfI/download?force=true&w=1920",
+    "description": "Nike new shoe models"
   },
   {
     "name": "Dress Shoe",
     "price": 50,
     "thumb_link": "https://unsplash.com/photos/WlB8TsI_th0/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/WlB8TsI_th0/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/WlB8TsI_th0/download?force=true&w=1920",
+    "description": "Shoes for formal events"
   },
   {
     "name": "High heels",
     "price": 50,
     "thumb_link": "https://unsplash.com/photos/87DgFV9SOc4/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/87DgFV9SOc4/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/87DgFV9SOc4/download?force=true&w=1920",
+    "description": "Shoes for formal events for women"
   },
   {
     "name": "Pants",
     "price": 25,
     "thumb_link": "https://unsplash.com/photos/5raPrOhbKQo/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/5raPrOhbKQo/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/5raPrOhbKQo/download?force=true&w=1920",
+    "description": "Casual pants for women"
   },
   {
     "name": "Dress skirt",
     "price": 25,
     "thumb_link": "https://unsplash.com/photos/JWZe-4hg9aA/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/JWZe-4hg9aA/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/JWZe-4hg9aA/download?force=true&w=1920",
+    "description": "Workplace apparel for women"
   },
   {
     "name": "Sportswear Grey",
     "price": 25,
     "thumb_link": "https://unsplash.com/photos/oXYGKCYhQOI/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/oXYGKCYhQOI/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/oXYGKCYhQOI/download?force=true&w=1920",
+    "description": "Comfortable sportswear"
   },
   {
     "name": "Casual Jeans",
     "price": 25,
     "thumb_link": "https://unsplash.com/photos/Ri17WyRuclo/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/Ri17WyRuclo/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/Ri17WyRuclo/download?force=true&w=1920",
+    "description": "Refresh look jeans"
   },
   {
     "name": "Brown boots",
     "price": 40,
     "thumb_link": "https://unsplash.com/photos/PdO0sdaLcdw/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/PdO0sdaLcdw/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/PdO0sdaLcdw/download?force=true&w=1920",
+    "description": "Boots for fall season"
   },
   {
     "name": "Break the limit hat",
     "price": 40,
     "thumb_link": "https://unsplash.com/photos/XjxUR6EIFFM/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/XjxUR6EIFFM/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/XjxUR6EIFFM/download?force=true&w=1920",
+    "description": "A stylish hat"
   },
   {
     "name": "Gold vanity combo",
     "price": 200,
     "thumb_link": "https://unsplash.com/photos/f7xoQpzl-Mo/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/f7xoQpzl-Mo/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/f7xoQpzl-Mo/download?force=true&w=1920",
+    "description": "A stylish set of accessories"
   },
   {
     "name": "Beach Call combo",
     "price": 200,
     "thumb_link": "https://unsplash.com/photos/68csPWTnafo/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/68csPWTnafo/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/68csPWTnafo/download?force=true&w=1920",
+    "description": "Go to the beach with style"
   },
   {
     "name": "Fall Jacket",
     "price": 100,
     "thumb_link": "https://unsplash.com/photos/m3RxZs9TsO4/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/m3RxZs9TsO4/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/m3RxZs9TsO4/download?force=true&w=1920",
+    "description": "Fall influenced jacket"
   },
   {
     "name": "Active Jeans",
     "price": 100,
     "thumb_link": "https://unsplash.com/photos/BciCcl8tjVU/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/BciCcl8tjVU/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/BciCcl8tjVU/download?force=true&w=1920",
+    "description": "Jeans for activities"
   },
   {
     "name": "Black gloves",
     "price": 70,
     "thumb_link": "https://unsplash.com/photos/05mO1fP0JKI/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/05mO1fP0JKI/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/05mO1fP0JKI/download?force=true&w=1920",
+    "description": "Gloves for work"
   },
   {
     "name": "Swim suit",
     "price": 70,
     "thumb_link": "https://unsplash.com/photos/0bwmQLXjuIg/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/0bwmQLXjuIg/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/0bwmQLXjuIg/download?force=true&w=1920",
+    "description": "A suit to enjoy the water"
   },
   {
     "name": "Suit for Lounge",
     "price": 180,
     "thumb_link": "https://unsplash.com/photos/JQ2D4I-2eyw/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/JQ2D4I-2eyw/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/JQ2D4I-2eyw/download?force=true&w=1920",
+    "description": "A tailor suit for formal drinking"
   },
   {
     "name": "Summer overcoat",
     "price": 180,
     "thumb_link": "https://unsplash.com/photos/scDoY4YJeoo/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/scDoY4YJeoo/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/scDoY4YJeoo/download?force=true&w=1920",
+    "description": "Keep you cool and stylish"
   },
   {
     "name": "Wedding tuxedo",
     "price": 300,
     "thumb_link": "https://unsplash.com/photos/PAQ1NtZVcl0/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/PAQ1NtZVcl0/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/PAQ1NtZVcl0/download?force=true&w=1920",
+    "description": "Tuxedo for your wedding day"
   },
   {
     "name": "Assorted ties",
     "price": 50,
     "thumb_link": "https://unsplash.com/photos/Xy6FpnFyVjo/download?force=true&w=640",
-    "large_link": "https://unsplash.com/photos/Xy6FpnFyVjo/download?force=true&w=1920"
+    "large_link": "https://unsplash.com/photos/Xy6FpnFyVjo/download?force=true&w=1920",
+    "description": "Ties for all occasions"
   }
 ]

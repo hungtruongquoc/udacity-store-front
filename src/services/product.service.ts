@@ -17,7 +17,8 @@ export interface ProductInterface {
   thumb_link?: string;
   large_link?: string;
   name?: string;
-  id?: number
+  id?: number;
+  description?: string;
 }
 
 let productListResponse: ProductInterface[] | null = null;

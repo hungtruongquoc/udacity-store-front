@@ -1,5 +1,10 @@
 <app-page-header>
-  <span *ngIf="detail">{{detail.name}}</span>
+  <p *ngIf="detail">
+    {{detail.name}}
+  </p>
+  <p *ngIf="detail" style="font-size: 14pt">
+    {{detail.description}}
+  </p>
   <span *ngIf="!detail">Product Detail</span>
 </app-page-header>
 <div class="detail-container" style="display: flex" *ngIf="detail">

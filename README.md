@@ -1,9 +1,11 @@
 # Front End Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+## Description
+
+A front end app for an e-commerce fashion shop. 
 
 ## Dependencies
-
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
 NodeJS version 12 and up
 
 ## Back End API

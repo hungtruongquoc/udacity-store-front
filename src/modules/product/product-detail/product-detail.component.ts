@@ -18,7 +18,6 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger;
     this.detail = this.route.snapshot.data['detail'];
   }
 

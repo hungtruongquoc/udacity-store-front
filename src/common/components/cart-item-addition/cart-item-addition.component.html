@@ -1,7 +1,7 @@
 <div class="cart-info-container">
     <mat-form-field appearance="standard">
         <mat-label>Quantity</mat-label>
-        <mat-select (selectionChange)="quantityChanged.emit($event.value)" [value]="initialQty">
+        <mat-select (selectionChange)="quantityChanged.emit($event.value)" [value]="initialQty" [(ngModel)]="selection">
             <mat-option [value]="0">0 (Remove)</mat-option>
             <mat-option [value]="1">1</mat-option>
             <mat-option [value]="2">2</mat-option>

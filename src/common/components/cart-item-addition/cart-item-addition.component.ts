@@ -19,6 +19,13 @@ export class CartItemAdditionComponent implements OnInit {
   @Output()
   addCartButtonClicked: EventEmitter<void> = new EventEmitter<void>();
 
+  private _selection: number | null = null;
+
+  set selection(value: number | null) {
+    this._selection = value;
+    console.log(this._selection)
+  }
+
   constructor() { }
 
   ngOnInit(): void {

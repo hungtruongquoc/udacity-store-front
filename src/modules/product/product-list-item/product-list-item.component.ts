@@ -10,7 +10,7 @@ import {skip} from "rxjs/operators";
     styleUrls: ['./product-list-item.component.scss']
 })
 export class ProductListItemComponent implements OnInit {
-    private quantity = 0;
+    private quantity: number | null = 0;
     cartItem: CartItemInterface | undefined | null = null;
 
     constructor(private cartSrv: ShoppingCartService, private appSrv: AppStateService) {
@@ -30,7 +30,7 @@ export class ProductListItemComponent implements OnInit {
         }
     }
 
-    updateItemQty(value: number): void {
+    updateItemQty(value: number | null): void {
         this.quantity = value;
     }
 
@@ -40,7 +40,7 @@ export class ProductListItemComponent implements OnInit {
         }
     }
 
-    get initialCartQty(): number {
+    get initialCartQty(): number | null {
         const {cartItem} = this;
         return cartItem  && cartItem.qty !== undefined ? cartItem.qty : 0;
     }

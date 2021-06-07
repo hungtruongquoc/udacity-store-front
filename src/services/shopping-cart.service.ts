@@ -3,10 +3,10 @@ import {BehaviorSubject} from "rxjs";
 
 export interface CartItemInterface {
   itemId?: number;
-  qty?: number;
+  qty?: number | null;
   name?: string;
   imageLink?: string;
-  price?: number
+  price?: number | null
 }
 
 let shoppingCart: CartItemInterface[] = [];

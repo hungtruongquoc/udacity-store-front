@@ -12,7 +12,7 @@ import {AppStateService} from "../../../services/app-state.service";
 export class ProductDetailComponent implements OnInit {
 
   detail: ProductInterface | null = null;
-  quantity: number = 0;
+  quantity: number | null = 0;
 
   constructor(private route: ActivatedRoute, private cartSrv: ShoppingCartService, private appSrv: AppStateService) {
   }
